@@ -1,0 +1,51 @@
+JFDML JFormDesigner: "8.2.2.0.382" Java: "17.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"$sizePolicy": 1
+			"defaultCloseOperation": 3
+			"resizable": false
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "textArea1"
+					"text": "Ai:"
+					"font": new java.awt.Font( "黑体", 0, 22 )
+					"rows": 10
+					"caretPosition": 3
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "panel2"
+				"border": new javax.swing.border.EtchedBorder( 1, null, null )
+				"alignmentX": 20.0f
+				"alignmentY": 2.0f
+				"minimumSize": new java.awt.Dimension( 119, 34 )
+				"preferredSize": new java.awt.Dimension( 119, 34 )
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "textArea2"
+					"text": "我："
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": "开始"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button1MouseClicked", true ) )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "After"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 105, 15 )
+			"size": new java.awt.Dimension( 390, 350 )
+		} )
+	}
+}
